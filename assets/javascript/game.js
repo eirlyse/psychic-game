@@ -1,3 +1,5 @@
+//variables
+
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 
 let wins = 0;
@@ -5,58 +7,62 @@ let losses = 0;
 let guessesRemaining = 9;
 let guessesSoFar = [];
 let psychicGuess = [];
+
+
+
+// psychic choice function
+
+// for loop set up - don't know if I need this: 
 // for (let i=0; i<letters.length, i++) {
 
-// let randomLetter = function(){
-//    psychic = letters[Math.floor(Math.random() * letters.length)];
-//    console.log(psychicGuess[0]);
-// };
+let randomLetter = function(){
+psychic = letters[Math.floor(Math.random() * letters.length)];
 
 
-document.onkeyup = function (event) {
-    let userGuess = event.key;
-    //guessesSoFar.push(userGuess);
-    console.log(psychicGuess[0]);
+};
+
+
+// win & lose alerts
+// not working though - get a string error in the console
+
+let userWin = {
+	alert("You win! The psychic also chose" + psychicGuess);
+};
+
+let userLose = {
+    alert("You lose. The psychic chose" + psychicGuess + " but you chose" + userGuess);
 }
 
-if (userGuess === psychicGuess[0]) (guessesRemaining > 0)
+
+
+    
+
+
+// user choice event
+document.onkeyup = function (event) {
+    let userGuess = event.key.toLowerCase();
+    randomLetter();
+
+    console.log(userGuess);
+
+
+if (userGuess === psychicGuess)
     wins++;
-    guessesRamining = 9;
-    guessesSoFar.length= 0;
-    psychicGuess.length= 0;
+    userWin();
+}
 
-    let randomLetter = function(){
-        psychic = letters[Math.floor(Math.random() * letters.length)];
-        console.log(psychicGuess[0]);
-    };
+if (userGuess !== psychicGuess) {
+    guessesRemaining--;
+    guessesSoFar.push(userGuess);
+}
 
-    console.log(computerGuess[0]);
+
  
     
 
-elseif (userGuess !== psychicGuess[0]) (guessesRemianing > 0)
-    guessesRemaining = guessesRemaining -1;
-    
-
-else {
-
-    losses++;
-    guessesRemaining= 9;
-    guessesSoFar.length=0;
-    psychicGuess.length=0;
-
-    let randomLetter = function(){
-        psychic = letters[Math.floor(Math.random() * letters.length)];
-        console.log(psychicGuess[0]);
-    };
-
-    console.log(psychicGuess[0]);
 
 
-
-}
-
-
+// trying different things??? 
 
 // let guesses = function(){
 //   document.getElementById()
