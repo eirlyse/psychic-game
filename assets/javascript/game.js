@@ -2,9 +2,12 @@
 
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 
+//setting variables as numbers
 let wins = 0;
 let losses = 0;
 let guessesRemaining = 9;
+
+//setting variables as arrays
 let guessesSoFar = [];
 let psychicGuess = [];
 
@@ -62,7 +65,7 @@ if (userGuess !== psychicGuess) {
 
 
 
-// trying different things??? 
+// trying different things??? idfk whats happening
 
 // let guesses = function(){
 //   document.getElementById()
